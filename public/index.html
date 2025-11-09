@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Inventory Management</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📦 Warehouse Inventory</h1>
+            <p>Manage your warehouse inventory with ease</p>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-value" id="statsTotal">0</div>
+                <div class="stat-label">Total Items</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="statsQuantity">0</div>
+                <div class="stat-label">Total Quantity</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="statsLowStock">0</div>
+                <div class="stat-label">Low Stock</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="statsCategories">0</div>
+                <div class="stat-label">Categories</div>
+            </div>
+        </div>
+
+        <!-- Add Inventory Item Form -->
+        <div class="form-section">
+            <h3>➕ Add New Inventory Item</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <input type="text" id="itemName" placeholder="Item Name *" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="itemSku" placeholder="SKU *" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="itemQuantity" placeholder="Quantity *" class="form-control" min="0" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="itemLocation" placeholder="Location (e.g., A-12-3) *" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="itemCategory" placeholder="Category *" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="itemMinStock" placeholder="Min Stock" class="form-control" min="0" value="0">
+                </div>
+                <div class="form-group">
+                    <input type="number" id="itemMaxStock" placeholder="Max Stock" class="form-control" min="0" value="1000">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="itemUnit" placeholder="Unit (e.g., units, kg)" class="form-control" value="units">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="itemSupplier" placeholder="Supplier" class="form-control">
+                </div>
+            </div>
+            <button id="addItemBtn" class="btn btn-primary">Add Inventory Item</button>
+        </div>
+
+        <!-- Filters and Search -->
+        <div class="form-section">
+            <div class="filter-row">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Search by name, SKU, location, or category..."
+                    class="form-control search-input"
+                >
+                <select id="categoryFilter" class="form-control filter-select">
+                    <option value="">All Categories</option>
+                </select>
+                <button id="lowStockBtn" class="btn btn-warning">⚠️ Low Stock</button>
+                <button id="refreshBtn" class="btn btn-secondary">🔄 Refresh</button>
+            </div>
+        </div>
+
+        <!-- AI Invoice Import -->
+        <div class="form-section">
+            <h3>🧠 Smart Invoice Import</h3>
+            <p class="section-subtitle">Paste invoice text or a structured JSON payload and let AI extract inventory line items automatically.</p>
+            <textarea id="invoiceText" class="form-control invoice-textarea" placeholder="Example:
+Product: Laptop X200, SKU: LPX200, Qty: 15, Location: A-12, Category: Electronics, Supplier: TechWorld
+Printer Paper A4 | SKU: PP-A4-500 | Quantity: 8 | Min Stock: 10
+[{
+  &quot;name&quot;: &quot;Desk Chair&quot;,
+  &quot;sku&quot;: &quot;DC-001&quot;,
+  &quot;quantity&quot;: 20,
+  &quot;location&quot;: &quot;B-1&quot;,
+  &quot;category&quot;: &quot;Furniture&quot;
+}]" rows="6"></textarea>
+            <div class="import-actions">
+                <button id="previewImportBtn" class="btn btn-secondary">🔍 Preview Import</button>
+                <button id="confirmImportBtn" class="btn btn-primary" disabled>✅ Import Items</button>
+            </div>
+            <div id="importPreview" class="import-preview"></div>
+        </div>
+
+        <!-- Inventory Items List -->
+        <div class="inventory-section">
+            <div class="section-header">
+                <h3>📋 Inventory Items</h3>
+            </div>
+            <div id="inventoryItems" class="inventory-list">
+                <!-- Inventory items will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
