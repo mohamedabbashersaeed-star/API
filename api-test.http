@@ -1,0 +1,71 @@
+### Warehouse Inventory API Test Suite
+### Make sure your server is running at http://localhost:3000
+
+@baseUrl = http://localhost:3000/api
+
+### 1. GET all inventory items
+GET {{baseUrl}}/inventory
+
+### 2. GET inventory statistics
+GET {{baseUrl}}/inventory/stats
+
+### 3. GET a specific inventory item by ID
+GET {{baseUrl}}/inventory/1
+
+### 4. GET low stock items
+GET {{baseUrl}}/inventory/low-stock
+
+### 5. GET items by category
+GET {{baseUrl}}/inventory/category/Electronics
+
+### 6. POST - Create a new inventory item
+POST {{baseUrl}}/inventory
+Content-Type: application/json
+
+{
+  "name": "Wireless Mouse - Logitech MX Master 3",
+  "sku": "LG-MX3-001",
+  "quantity": 25,
+  "location": "A-15-2",
+  "category": "Electronics",
+  "minStock": 10,
+  "maxStock": 100,
+  "unit": "units",
+  "supplier": "Logitech Inc."
+}
+
+### 7. PUT - Update an existing inventory item
+PUT {{baseUrl}}/inventory/1
+Content-Type: application/json
+
+{
+  "quantity": 50,
+  "location": "A-12-5"
+}
+
+### 8. PATCH - Adjust inventory quantity (add stock)
+PATCH {{baseUrl}}/inventory/1/quantity
+Content-Type: application/json
+
+{
+  "adjustment": 10,
+  "operation": "add"
+}
+
+### 9. PATCH - Adjust inventory quantity (subtract stock)
+PATCH {{baseUrl}}/inventory/1/quantity
+Content-Type: application/json
+
+{
+  "adjustment": 5,
+  "operation": "subtract"
+}
+
+### 10. DELETE - Delete an inventory item
+DELETE {{baseUrl}}/inventory/2
+
+### 11. Health check
+GET {{baseUrl}}/health
+
+### 12. GET all inventory items after operations
+GET {{baseUrl}}/inventory

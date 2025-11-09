@@ -1,0 +1,228 @@
+/* ===================================
+   CUSTOMIZATION EXAMPLES
+   Copy these into style.css to try different themes
+   =================================== */
+
+/* ===== EXAMPLE 1: MODERN DARK THEME ===== */
+/*
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --bg-primary: #1f2937;
+    --bg-secondary: #374151;
+    --bg-body: #111827;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --border-color: #4b5563;
+}
+*/
+
+/* ===== EXAMPLE 2: WARM ORANGE THEME ===== */
+/*
+:root {
+    --primary-color: #f97316;
+    --primary-hover: #ea580c;
+    --success-color: #22c55e;
+    --danger-color: #ef4444;
+    --bg-primary: #ffffff;
+    --bg-secondary: #fff7ed;
+    --bg-body: #ffedd5;
+}
+*/
+
+/* ===== EXAMPLE 3: COOL BLUE THEME ===== */
+/*
+:root {
+    --primary-color: #0ea5e9;
+    --primary-hover: #0284c7;
+    --success-color: #10b981;
+    --danger-color: #f43f5e;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f0f9ff;
+    --bg-body: #e0f2fe;
+}
+*/
+
+/* ===== EXAMPLE 4: MINIMALIST GRAY THEME ===== */
+/*
+:root {
+    --primary-color: #6b7280;
+    --primary-hover: #4b5563;
+    --success-color: #059669;
+    --danger-color: #dc2626;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --bg-body: #f3f4f6;
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+}
+*/
+
+/* ===== EXAMPLE 5: VIBRANT PURPLE THEME ===== */
+/*
+:root {
+    --primary-color: #a855f7;
+    --primary-hover: #9333ea;
+    --success-color: #22c55e;
+    --danger-color: #ef4444;
+    --bg-primary: #ffffff;
+    --bg-secondary: #faf5ff;
+    --bg-body: #f3e8ff;
+}
+*/
+
+/* ===== EXAMPLE 6: PROFESSIONAL GREEN THEME ===== */
+/*
+:root {
+    --primary-color: #059669;
+    --primary-hover: #047857;
+    --success-color: #10b981;
+    --danger-color: #dc2626;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f0fdf4;
+    --bg-body: #dcfce7;
+}
+*/
+
+/* ===== CUSTOM BACKGROUND GRADIENTS ===== */
+
+/* Ocean Gradient */
+/*
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+*/
+
+/* Sunset Gradient */
+/*
+body {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+*/
+
+/* Forest Gradient */
+/*
+body {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+*/
+
+/* Warm Gradient */
+/*
+body {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+*/
+
+/* ===== CUSTOM FONT EXAMPLES ===== */
+
+/* Google Fonts - Roboto */
+/*
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --font-family: 'Roboto', sans-serif;
+}
+*/
+
+/* Google Fonts - Inter */
+/*
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --font-family: 'Inter', sans-serif;
+}
+*/
+
+/* Google Fonts - Poppins */
+/*
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --font-family: 'Poppins', sans-serif;
+}
+*/
+
+/* ===== ROUNDED BUTTONS ===== */
+/*
+.btn {
+    border-radius: 50px;  /* Very rounded */
+}
+*/
+
+/* ===== SQUARE BUTTONS ===== */
+/*
+.btn {
+    border-radius: 0;  /* No rounding */
+}
+*/
+
+/* ===== LARGER SPACING ===== */
+/*
+:root {
+    --spacing-sm: 12px;
+    --spacing-md: 24px;
+    --spacing-lg: 36px;
+    --spacing-xl: 48px;
+}
+*/
+
+/* ===== COMPACT SPACING ===== */
+/*
+:root {
+    --spacing-sm: 4px;
+    --spacing-md: 8px;
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+}
+*/
+
+/* ===== WIDER CONTAINER ===== */
+/*
+.container {
+    max-width: 1200px;
+}
+*/
+
+/* ===== NARROWER CONTAINER ===== */
+/*
+.container {
+    max-width: 600px;
+}
+*/
+
+/* ===== ADD SHADOWS ===== */
+/*
+.inventory-item {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.inventory-item:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+*/
+
+/* ===== REMOVE SHADOWS ===== */
+/*
+.inventory-item {
+    box-shadow: none;
+}
+*/
+
+/* ===== ADD BORDERS ===== */
+/*
+.inventory-item {
+    border: 2px solid var(--border-color);
+}
+*/
+
+/* ===== NO BORDERS ===== */
+/*
+.inventory-item {
+    border: none;
+}
+*/
+
+
